@@ -1,0 +1,53 @@
+Table 1. EX1: refined-grid coefficient recovery.
+Parameter | Truth | Case1 recovered | Case1 error (%) | Case2 recovered | Case2 error (%)
+----------+-------+-----------------+-----------------+-----------------+----------------
+q0        | 1.1   | 1.1000          | 0.00            | 1.1000          | 0.00           
+q2        | 0.8   | 0.8000          | 0.00            | 0.8002          | 0.02           
+a0        | 2.4   | 2.4000          | 0.00            | 2.3999          | 0.00           
+a2        | 1.5   | 1.5000          | 0.00            | 1.5007          | 0.04           
+
+Table 2. EX2: inverse-grid refinement with fixed fine-grid data.
+Case  | Inverse grid | E_inf (%) | E_2(q) (%) | E_2(a) (%)
+------+--------------+-----------+------------+-----------
+Case1 | Base         | 1.11      | 0.20       | 0.05      
+Case1 | Refined      | 0.00      | 0.00       | 0.00      
+Case2 | Base         | 26.68     | 2.88       | 0.71      
+Case2 | Refined      | 0.25      | 0.03       | 0.01      
+
+Table 3. EX3: independent validation RMS (* marks the selected model).
+Case  | True model | Linear     | Quadratic   | Cubic      
+------+------------+------------+-------------+------------
+Case1 | Quadratic  | 6.6226e-02 | 9.0177e-09* | 6.6046e-02 
+Case1 | Cubic      | 6.9755e-02 | 6.9755e-02  | 9.5387e-09*
+Case2 | Quadratic  | 1.7579e-02 | 2.7164e-07* | 1.7578e-02 
+Case2 | Cubic      | 1.2617e-02 | 1.2617e-02  | 1.8140e-07*
+
+Table 4. EX3: model-selection counts over ten noisy trials.
+Case  | Noise level | Linear | Quadratic | Cubic
+------+-------------+--------+-----------+------
+Case1 | 1e-05       | 0      | 0         | 10   
+Case1 | 1e-04       | 0      | 0         | 10   
+Case1 | 1e-03       | 0      | 0         | 10   
+Case2 | 1e-05       | 0      | 0         | 10   
+Case2 | 1e-04       | 0      | 0         | 10   
+Case2 | 1e-03       | 0      | 0         | 10   
+
+Table 5. EX4: base-grid sensitivities and refined-grid recovery.
+Case  | Inputs   | sigma_min(J) | cond(J)  | E_RMS (%) | E_inf (%)
+------+----------+--------------+----------+-----------+----------
+Case1 | f only   | 1.4354e-03   | 109.1314 | 0.00      | 0.00     
+Case1 | g only   | 5.8266e-04   | 544.8580 | 0.00      | 0.00     
+Case1 | Both f,g | 8.0233e-03   | 41.6280  | 0.00      | 0.00     
+Case2 | f only   | 1.1275e-03   | 37.1002  | 0.02      | 0.02     
+Case2 | g only   | 1.0132e-03   | 69.6849  | 0.07      | 0.15     
+Case2 | Both f,g | 1.7990e-03   | 36.1479  | 0.11      | 0.25     
+
+Table 6. EX4: mean parameter relative RMS error over ten noisy trials.
+Case  | Noise level | f only (%) | g only (%) | Both f,g (%)
+------+-------------+------------+------------+-------------
+Case1 | 1e-05       | 0.29       | 0.88       | 0.09        
+Case1 | 1e-04       | 3.40       | 10.78      | 0.83        
+Case1 | 1e-03       | 38.09      | 64.66      | 11.37       
+Case2 | 1e-05       | 0.92       | 1.26       | 0.75        
+Case2 | 1e-04       | 8.16       | 11.70      | 6.11        
+Case2 | 1e-03       | 95.00      | 110.73     | 52.77       
