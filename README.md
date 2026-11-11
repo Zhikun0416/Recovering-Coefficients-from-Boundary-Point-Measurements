@@ -1,5 +1,7 @@
 # Single-point Navier inversion
 
+https://arxiv.org/abs/2611.12551
+
 Numerical experiments for **Simultaneous recovery of a potential and a spatially dependent nonlinearity from boundary measurements at a single point**.
 
 The paper studies the simultaneous recovery of `q(x)` and `F(x,u)` in
